@@ -1,0 +1,14 @@
+#ignore All
+*
+
+#unignore all with extension
+!*.*
+
+#unignore all directories
+!*/
+#unignore Makefile
+!Makefile
+
+# Ignore DS STORE
+.DS_STORE
+
