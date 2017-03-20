@@ -1,0 +1,14 @@
+#include <stdio.h>
+#include <omp.h>
+
+int main() {
+    omp_set_num_threads(2);
+    int a=0;
+    int i;
+    #pragma omp parallel for reduction(+:a)
+    for(i=0; i<20000000; i++) {
+        a++;
+    }
+    printf("a = %d\n", a);
+    return 0;
+}
